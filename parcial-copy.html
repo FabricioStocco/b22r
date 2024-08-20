@@ -7,7 +7,8 @@
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
-            margin: 15px;
+            margin: 0;
+            padding: 0;
             background: #FF6B3E; /* Tom de laranja do degradê */
             color: black;
         }
@@ -28,13 +29,16 @@
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            margin: 15px auto;
+            width: 100%;
+            max-width: 600px; /* Limita a largura máxima */
         }
 
         table.bt {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
-            table-layout: fixed; /* Para garantir que a tabela se ajuste */
+            table-layout: auto; /* Para garantir que a tabela se ajuste */
         }
 
         table.bt td {
@@ -60,12 +64,9 @@
 
         /* Ajustes específicos para telas menores */
         @media (max-width: 768px) {
-            body {
-                margin: 5px;
-            }
-
             .content {
                 padding: 10px;
+                margin: 10px;
             }
 
             table.bt td {
