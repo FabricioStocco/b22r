@@ -11,6 +11,7 @@
             padding: 0;
             background: #FF6B3E; /* Tom de laranja do degradê */
             color: black;
+            overflow-x: hidden; /* Evitar que o conteúdo exceda a largura da tela */
         }
 
         header {
@@ -30,22 +31,22 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             margin: 15px auto;
-            width: 100%;
-            max-width: 600px; /* Limita a largura máxima */
+            width: calc(100% - 30px); /* Garante que a largura seja 100% menos as margens */
+            max-width: 600px;
         }
 
         table.bt {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
-            table-layout: auto; /* Para garantir que a tabela se ajuste */
+            table-layout: fixed; /* Força a tabela a se ajustar dentro do espaço disponível */
+            word-wrap: break-word; /* Permite que as palavras quebrem e se ajustem na célula */
         }
 
         table.bt td {
             border-bottom: 1px dotted #bbbbbb;
             padding: 8px;
             font-size: 9pt;
-            word-wrap: break-word; /* Quebra o texto se necessário */
         }
 
         table.bt td.g {
