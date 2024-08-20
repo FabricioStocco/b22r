@@ -11,35 +11,44 @@
             background: #FF6B3E; /* Tom de laranja do degradê */
             color: black;
         }
+
         header {
             background: linear-gradient(to bottom, #FF6B3E, #F9401E); /* Degradê de laranja */
             padding: 20px;
             text-align: center;
         }
+
         header img {
             max-width: 100%;
             height: auto;
         }
+
         .content {
             background: #FFF5F0; /* Tom de laranja mais claro para contraste */
             padding: 15px;
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
+
         table.bt {
             width: 100%;
             border-collapse: collapse;
             margin-top: 10px;
+            table-layout: fixed; /* Para garantir que a tabela se ajuste */
         }
+
         table.bt td {
             border-bottom: 1px dotted #bbbbbb;
             padding: 8px;
             font-size: 9pt;
+            word-wrap: break-word; /* Quebra o texto se necessário */
         }
+
         table.bt td.g {
             font-weight: bold;
             color: #666666;
         }
+
         .footer {
             background: linear-gradient(to bottom, #F9401E, #FF6B3E); /* Degradê invertido */
             color: black;
@@ -47,6 +56,27 @@
             padding: 10px;
             margin-top: 20px;
             border-radius: 10px;
+        }
+
+        /* Ajustes específicos para telas menores */
+        @media (max-width: 768px) {
+            body {
+                margin: 5px;
+            }
+
+            .content {
+                padding: 10px;
+            }
+
+            table.bt td {
+                padding: 5px;
+                font-size: 8pt;
+            }
+
+            .footer {
+                padding: 8px;
+                font-size: 8pt;
+            }
         }
     </style>
     <title>Teste G Live</title>
